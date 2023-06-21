@@ -1,0 +1,75 @@
+@import 'universals';
+@import 'variables';
+@import 'mixings';
+
+.header {
+  background-color: $color-variant-b;
+  padding: 10px 10px 10px;
+  border-radius: 10px 10px 0px 0px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      color: $color-variant-r;
+    }
+  }
+}
+
+.button {
+  @include buttons();
+  font-family: $font-type;
+
+  &--nav {
+    background-color: $color-variant-r;
+    color: #fff;
+
+    &:hover {
+      border: 1px solid $color-variant-r;
+      color: $color-variant-r;
+    }
+  }
+
+  &--success {
+    background-color: $color-variant-g;
+    color: #fff;
+
+    &:hover {
+      background-color: $color-variant-ge;
+      color: #fff;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: $color-variant-b;
+  padding: 0 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+  //border: red solid 1px;
+
+  &__label {
+    font-size: 14px;
+    color: $color-variant-r;
+    font-weight: 600;
+  }
+
+  &__input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid $color-primary;
+  }
+}
+
+.main__table {
+  width: 100%;
+  background-color: $color-variant-y;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  color: $color-primary;
+}
